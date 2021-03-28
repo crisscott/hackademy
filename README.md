@@ -1,2 +1,0 @@
-# hackademy
-Repositorio Código Fuente
