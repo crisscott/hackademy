@@ -1,9 +1,39 @@
-{% extends "base_template.html" %}
-{% block title %}Tutorial Flask: Miniblog{% endblock %}
-{% block content %}
-    <ul>
-    {% for post in posts %}
-        <li>{{ post.title }}</li>
-    {% endfor %}
-    </ul>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    <link rel= "stylesheet" type= "text/css" href= "/static/css/style.css">
+    <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet"type="text/css">
+    <title>Diario</title>
+</head>
+<body>
+    <div class="header-container">
+        <h2>Diario Personal</h2>
+    </div>
+
+    <div class="main-container">
+        <h3>Lista de Cosas</h3>
+        <ul id="list_diary">
+            <li>
+                <a href="#">
+                    <div class="list_diary_title">
+                        <span>Title #1</span>
+                        <span>X</span>
+                    </div>
+                    <p>Text Content #1</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h2>Title #2</h2>
+                <p>Text Content #2</p>
+              </a>
+            </li>
+          </ul>
+    </div>
+</body>
+</html>
