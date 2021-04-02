@@ -7,7 +7,7 @@
 
     <script type="text/javascript" src="/static/js/main.js"></script>
     <link rel= "stylesheet" type= "text/css" href= "/static/css/style.css">
-    <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet"type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet"type="text/css">
     <title>Diario</title>
 </head>
 <body>
@@ -16,24 +16,43 @@
     </div>
 
     <div class="main-container">
+        <form class="form">
+            <div class="col">
+                <div class="form-element">
+                    <label for="create_date">¿Cómo te sientes?</label>
+                    <input type="text" id="create_date" name="create_date" placeholder="Fecha">
+                </div>
+    
+                <div class="form-element">
+                    <label for="create_feel">¿Cómo te sientes?</label>
+                    <input type="text" id="create_feel" name="create_feel" placeholder="¿Cómo me siento?">
+                </div>
+    
+                <div class="form-element">
+                    <label for="create_description">Cuentame más</label>
+                    <textarea rows="4" style="resize: vertical;" id="create_description" name="create_description"></textarea>
+                </div>
+
+                <button type="button" id="create_add">Agregar</button>
+            </div>
+            <div class="col">
+                <div class="form-element">
+                    <label for="create_img">Imagen</label>
+                    <div class="create_img_wrapper">
+                        <span class="create_img_label">
+                            Cargar Imagen
+                        </span>
+                        <input type="file" accept="image/*" id="create_img" name="create_img" class="create_img_input" placeholder="Cargar Imagen">
+                        <img class="create_img_preview" id="create_img_preview"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+
         <h3>Lista de Cosas</h3>
         <ul id="list_diary">
-            <li>
-                <a href="#">
-                    <div class="list_diary_title">
-                        <span>Title #1</span>
-                        <span>X</span>
-                    </div>
-                    <p>Text Content #1</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <h2>Title #2</h2>
-                <p>Text Content #2</p>
-              </a>
-            </li>
-          </ul>
+
+        </ul>
     </div>
 </body>
 </html>
