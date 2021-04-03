@@ -16,37 +16,50 @@
     </div>
 
     <div class="main-container">
-        <form class="form">
-            <div class="col">
-                <div class="form-element">
-                    <label for="create_date">¿Cómo te sientes?</label>
-                    <input type="text" id="create_date" name="create_date" placeholder="Fecha">
+        <div class="alert danger">
+            <span class="closebtn">&times;</span>
+            <span class="text"></span>
+        </div>
+        <form class="form" id="form" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col">
+                    <div class="form-element">
+                        <label for="create_date">¿Cómo te sientes?</label>
+                        <input type="text" id="create_date" name="create_date" class="form-option" data-required="true" placeholder="Fecha (dd/mm/yyyy)" maxlength="10">
+                        <label for="" class="form-error">Dato Requerido</label>
+                    </div>
+        
+                    <div class="form-element">
+                        <label for="create_feel">¿Cómo te sientes?</label>
+                        <input type="text" id="create_feel" name="create_feel" class="form-option" data-required="true" placeholder="¿Cómo me siento?">
+                        <label for="" class="form-error">Dato Requerido</label>
+                    </div>
+        
+                    <div class="form-element">
+                        <label for="create_description">Cuentame más</label>
+                        <textarea rows="4" style="resize: vertical;" class="form-option" data-required="true" id="create_description" name="create_description"></textarea>
+                        <label for="" class="form-error">Dato Requerido</label>
+                    </div>
                 </div>
-    
-                <div class="form-element">
-                    <label for="create_feel">¿Cómo te sientes?</label>
-                    <input type="text" id="create_feel" name="create_feel" placeholder="¿Cómo me siento?">
-                </div>
-    
-                <div class="form-element">
-                    <label for="create_description">Cuentame más</label>
-                    <textarea rows="4" style="resize: vertical;" id="create_description" name="create_description"></textarea>
-                </div>
-
-                <button type="button" id="create_add">Agregar</button>
-            </div>
-            <div class="col">
-                <div class="form-element">
-                    <label for="create_img">Imagen</label>
-                    <div class="create_img_wrapper">
-                        <span class="create_img_label">
-                            Cargar Imagen
-                        </span>
-                        <input type="file" accept="image/*" id="create_img" name="create_img" class="create_img_input" placeholder="Cargar Imagen">
-                        <img class="create_img_preview" id="create_img_preview"/>
+                <div class="col">
+                    <div class="form-element">
+                        <label for="create_img">Imagen</label>
+                        <div class="create_img_wrapper">
+                            <span class="create_img_label">
+                                Cargar Imagen
+                            </span>
+                            <input type="file" accept="image/*" id="create_img" name="create_img" class="create_img_input form-option" placeholder="Cargar Imagen">
+                            <img class="create_img_preview" id="create_img_preview"/>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <button type="submit" id="create_add">Agregar</button>
+                </div>
+            </div>
+            
         </form>
 
         <h3>Lista de Cosas</h3>
