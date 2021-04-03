@@ -13,7 +13,8 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '7110c8ae51a4b5af97be6534caef90e4bb9bdcb3380af008f90b23a5d1616bf319bc298105da20fe'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:12345@localhost:5432/diary'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:12345@localhost:5432/diary'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://evckefqtiqrdaj:12cfd684e4f6273a8f3ad6aef49e212bd9633517b7d7df085d294dae18d0484d@ec2-3-91-127-228.compute-1.amazonaws.com:5432/dd8oe1p0s9q54k'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
